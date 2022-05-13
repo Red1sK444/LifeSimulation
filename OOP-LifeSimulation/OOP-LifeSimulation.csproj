@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{37E2AE7B-98EE-4255-BC70-D22E6F97E037}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>OOP_LifeSimulation</RootNamespace>
+        <AssemblyName>OOP_LifeSimulation</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Deployment" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Biomes\Biome.cs" />
+        <Compile Include="Biomes\BiomesEnum.cs" />
+        <Compile Include="Biomes\Forest.cs" />
+        <Compile Include="Biomes\Lake.cs" />
+        <Compile Include="Game\Drawer.cs" />
+        <Compile Include="Game\Game.cs" />
+        <Compile Include="Game\Spawner.cs" />
+        <Compile Include="Interfaces\IDrawable.cs" />
+        <Compile Include="Interfaces\Indicator.cs" />
+        <Compile Include="Interfaces\IReactingToSeasonChange.cs" />
+        <Compile Include="Interfaces\IShowingInfo.cs" />
+        <Compile Include="Interfaces\ITickObject.cs" />
+        <Compile Include="Inventory\Inventory.cs" />
+        <Compile Include="Inventory\Items\FoodItems\FoodItem.cs" />
+        <Compile Include="Inventory\Items\FoodItems\PlantFoodItem.cs" />
+        <Compile Include="Inventory\Items\FoodItems\MeatFoodItem.cs" />
+        <Compile Include="Inventory\Items\Item.cs" />
+        <Compile Include="Inventory\Items\Resources\Resource.cs" />
+        <Compile Include="Inventory\Items\Resources\ResTypes\Gold.cs" />
+        <Compile Include="Inventory\Items\Resources\ResTypes\Iron.cs" />
+        <Compile Include="Inventory\Items\Resources\ResTypes\Stone.cs" />
+        <Compile Include="Inventory\Items\Resources\ResTypes\Wood.cs" />
+        <Compile Include="Map\Cell.cs" />
+        <Compile Include="Map\Map.cs" />
+        <Compile Include="Map\SeasonEnum.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Units\Buildings\Building.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\Barn.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\House.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\ISource.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\IStorage.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\Source.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\Storage.cs" />
+        <Compile Include="Units\Buildings\BuildingTypes\StorageState.cs" />
+        <Compile Include="Units\EntitiesExtended\Actions\BuilderActions.cs" />
+        <Compile Include="Units\EntitiesExtended\Actions\CollectorHunterActions.cs" />
+        <Compile Include="Units\EntitiesExtended\Actions\HumanActions.cs" />
+        <Compile Include="Units\EntitiesExtended\Actions\ShepherdActions.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\CarnivoreEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Carnivore\Crocodile.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Carnivore\Wolf.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\HerbivoreEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Herbivore\Donkey.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Herbivore\Rabbit.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\OmnivorousEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Omnivorous\Bear.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Omnivorous\Human.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Omnivorous\Sloth.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\CarnivoreTameableEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\Carnivore\Fox.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\HerbivoreTameableEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\Herbivore\Giraffe.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\Omnivious\Honey Badger.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\OmnivorousTameableEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entities\Tameable\TameableEntity.cs" />
+        <Compile Include="Units\EntitiesExtended\Entity.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\FinderWithCondition.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\FreeMovement\AllRandomMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\FreeMovement\AntMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\FreeMovement\AreaAntMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\FreeMovement\FreeMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\TargetMovement\BurstMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\TargetMovement\LadderMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\TargetMovement\StraightMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityMovement\TargetMovement\TargetMovement.cs" />
+        <Compile Include="Units\EntitiesExtended\EntitySex.cs" />
+        <Compile Include="Units\EntitiesExtended\EntityState.cs" />
+        <Compile Include="Units\EntitiesExtended\IEatableForCarnivore.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\CarnivoreLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HerbivoreLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\HumanLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\ProfessionLifecycleManagers\BuilderLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\ProfessionLifecycleManagers\CollectorLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\ProfessionLifecycleManagers\HunterLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\ProfessionLifecycleManagers\ShepherdLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\LifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\OmnivorousLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\Tameable\CarnivoreTameableLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\Tameable\HerbivoreTameableLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\Tameable\OmnivorousTameableLifecycleManager.cs" />
+        <Compile Include="Units\EntitiesExtended\LifecycleManagers\Tameable\TameableLifecycleManager.cs" />
+        <Compile Include="Units\PlantsExtended\Fruitable.cs" />
+        <Compile Include="Units\PlantsExtended\Fruits\Fruit.cs" />
+        <Compile Include="Units\PlantsExtended\Fruits\FruitGrowthState.cs" />
+        <Compile Include="Units\PlantsExtended\Fruits\NonToxicFruit.cs" />
+        <Compile Include="Units\PlantsExtended\Fruits\ToxicFruit.cs" />
+        <Compile Include="Units\PlantsExtended\IEatable.cs" />
+        <Compile Include="Units\PlantsExtended\IEatableForHerbivore.cs" />
+        <Compile Include="Units\PlantsExtended\Plant.cs" />
+        <Compile Include="Units\PlantsExtended\PlantGrowthState.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\EatableFruitableNonToxicPlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\EatableFruitableToxicPlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\EatableNonFruitableNonToxicPlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\EatableNonFruitableToxicPlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\EatablePlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\NonEatableFruitablePlant.cs" />
+        <Compile Include="Units\PlantsExtended\Plants\NonEatableNonFruitablePlant.cs" />
+        <Compile Include="Units\PlantsExtended\SpreadingPlant.cs" />
+        <Compile Include="Units\Unit.cs" />
+        <Compile Include="Utils\Coords.cs" />
+        <Compile Include="Utils\Utils.cs" />
+        <Compile Include="Villages\Village.cs" />
+        <Compile Include="WinForms\Form1.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="WinForms\Form1.Designer.cs">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="WinForms\Program.cs" />
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="WinForms\Form1.resx">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+        <None Include="WinForms\App.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
