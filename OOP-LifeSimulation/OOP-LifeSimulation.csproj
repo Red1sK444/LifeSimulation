@@ -47,10 +47,6 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Biomes\Biome.cs" />
-        <Compile Include="Biomes\BiomesEnum.cs" />
-        <Compile Include="Biomes\Forest.cs" />
-        <Compile Include="Biomes\Lake.cs" />
         <Compile Include="Game\Drawer.cs" />
         <Compile Include="Game\Game.cs" />
         <Compile Include="Game\Spawner.cs" />
@@ -59,16 +55,10 @@
         <Compile Include="Interfaces\IReactingToSeasonChange.cs" />
         <Compile Include="Interfaces\IShowingInfo.cs" />
         <Compile Include="Interfaces\ITickObject.cs" />
-        <Compile Include="Inventory\Inventory.cs" />
-        <Compile Include="Inventory\Items\FoodItems\FoodItem.cs" />
-        <Compile Include="Inventory\Items\FoodItems\PlantFoodItem.cs" />
-        <Compile Include="Inventory\Items\FoodItems\MeatFoodItem.cs" />
-        <Compile Include="Inventory\Items\Item.cs" />
-        <Compile Include="Inventory\Items\Resources\Resource.cs" />
-        <Compile Include="Inventory\Items\Resources\ResTypes\Gold.cs" />
-        <Compile Include="Inventory\Items\Resources\ResTypes\Iron.cs" />
-        <Compile Include="Inventory\Items\Resources\ResTypes\Stone.cs" />
-        <Compile Include="Inventory\Items\Resources\ResTypes\Wood.cs" />
+        <Compile Include="Map\Biomes\Biome.cs" />
+        <Compile Include="Map\Biomes\BiomesEnum.cs" />
+        <Compile Include="Map\Biomes\Forest.cs" />
+        <Compile Include="Map\Biomes\Lake.cs" />
         <Compile Include="Map\Cell.cs" />
         <Compile Include="Map\Map.cs" />
         <Compile Include="Map\SeasonEnum.cs" />
@@ -115,6 +105,16 @@
         <Compile Include="Units\EntitiesExtended\EntitySex.cs" />
         <Compile Include="Units\EntitiesExtended\EntityState.cs" />
         <Compile Include="Units\EntitiesExtended\IEatableForCarnivore.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Inventory.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\FoodItems\FoodItem.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\FoodItems\MeatFoodItem.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\FoodItems\PlantFoodItem.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Item.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Resources\Resource.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Resources\ResTypes\Gold.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Resources\ResTypes\Iron.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Resources\ResTypes\Stone.cs" />
+        <Compile Include="Units\EntitiesExtended\Inventory\Items\Resources\ResTypes\Wood.cs" />
         <Compile Include="Units\EntitiesExtended\LifecycleManagers\CarnivoreLifecycleManager.cs" />
         <Compile Include="Units\EntitiesExtended\LifecycleManagers\HerbivoreLifecycleManager.cs" />
         <Compile Include="Units\EntitiesExtended\LifecycleManagers\HumanLifecycleManagers\HumanLifecycleManager.cs" />
